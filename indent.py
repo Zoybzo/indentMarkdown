@@ -19,7 +19,7 @@ def indent(file_path):
             # change the beginning of the line to '##'
                 line = '#' + line 
             # if the line begin with '>' and the next line does not begin with '>', add an empty line after the line
-            if line.startswith('>'):
+            elif line.startswith('>'):
                 # get the index of the line
                 index = lines.index(line)
                 # get the length of lines
@@ -30,7 +30,6 @@ def indent(file_path):
                     line += '\n'
             # change the line in the file
             f.write(line)
-            # print(line)
     # print the success message
     print('The file has been indented successfully')
     return 
